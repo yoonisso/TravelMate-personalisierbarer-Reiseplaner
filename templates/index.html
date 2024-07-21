@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>TravelMate - dein persönlicher Reiseplaner</title>
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px #000;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+        }
+
+        label {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #ff7f50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+<h1>TravelMate - dein persönlicher Reiseplaner</h1>
+<form action="/plan" method="post">
+    <label for="age">Alter:</label>
+    <input type="text" id="age" name="age"><br><br>
+
+    <label for="origin">Herkunft:</label>
+    <input type="text" id="origin" name="origin"><br><br>
+
+    <label for="travel_period_start">Reisezeitraum Start:</label>
+    <input type="text" id="travel_period_start" name="travel_period_start"><br><br>
+
+    <label for="travel_period_end">Reisezeitraum Ende:</label>
+    <input type="text" id="travel_period_end" name="travel_period_end"><br><br>
+
+    <label for="interests">Persönliche Interessen:</label>
+    <input type="text" id="interests" name="interests"><br><br>
+
+    <label for="accommodation">Unterkunftspräferenzen:</label>
+    <input type="text" id="accommodation" name="accommodation"><br><br>
+
+    <label for="temperature">Bevorzugte Temperatur:</label>
+    <input type="text" id="temperature" name="temperature"><br><br>
+
+    <label for="destination">Reiseziel:</label>
+    <input type="text" id="destination" name="destination"><br><br>
+
+    <input type="submit" value="Reiseplan generieren">
+</form>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    $(function() {
+        $("#travel_period_start, #travel_period_end").datepicker({
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+</body>
+</html>

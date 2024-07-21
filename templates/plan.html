@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>TravelMate - dein persönlicher Reiseplaner</title>
+    <!-- Custom CSS for Summer Vibes -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px #000;
+        }
+
+        pre {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            background-color: #ff7f50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+            width: 150px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+<h1>Dein Reiseplan</h1>
+<pre>{{ plan }}</pre>
+<a href="/">Zurück</a>
+</body>
+</html>
