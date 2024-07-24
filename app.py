@@ -23,8 +23,10 @@ def plan():
     # Reisedaten aus dem Formular erhalten
     age = request.form['age']
     origin = request.form['origin']
+    amount = request.form['amount']
     travel_period_start = request.form['travel_period_start']
     travel_period_end = request.form['travel_period_end']
+    budget = request.form['budget']
     interests = request.form['interests']
     accommodation = request.form['accommodation']
     temperature = request.form['temperature']
@@ -35,14 +37,14 @@ def plan():
                     zeige deine Ergebnisse verständlich auf""" \
              f"Alter: {age}\n" \
              f"Herkunft: {origin}\n" \
+             f"Anzahl von Personen: {amount}\n" \
              f"Reisezeitraum: {travel_period_start} bis {travel_period_end}\n" \
+             f"Budget: {budget}\n" \
              f"Persönliche Interessen: {interests}\n" \
              f"Unterkunftspräferenzen: {accommodation}\n" \
              f"Bevorzugte Temperatur: {temperature}\n" \
              f"Reiseziel: {destination}\n"
-    #TODO angabe wieviele Personen
-    #TODO Einbindung einer WetterAPI
-    #TODO Einbindung eines Währungsrechners
+
 
 
     plans = openaiAPI.chatCompletion(prompt)

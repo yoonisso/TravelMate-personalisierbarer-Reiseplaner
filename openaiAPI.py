@@ -2,6 +2,7 @@ import os
 from openai import OpenAI
 import logging
 from dotenv import load_dotenv
+import json
 
 def loadAPIKey():
     # Laden der Umgebungsvariablen
@@ -30,9 +31,8 @@ def chatCompletion(prompt):
 
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
-        response_format={ "type": "json_object" },
         messages=[
-            {"role": "system", "content": "You are a helpful assistant for travel planner. You output your findings in JSON."},
+            {"role": "system", "content": "You are a helpful assistant for travel planner. You output your findings in a nice looking list. The list must be detailed and every input must be taken into account"},
             {"role": "user", "content": prompt}]
     )
     return completion.choices[0].message.content
